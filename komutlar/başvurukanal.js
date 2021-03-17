@@ -1,6 +1,11 @@
 module.exports = {
   name: "başvuru",
-  alisase: ["başvuru-kanal", "başvurukanal-ayarla", "başvurukanal", "boteklekanal"],
+  alisase: [
+    "başvuru-kanal",
+    "başvurukanal-ayarla",
+    "başvurukanal",
+    "boteklekanal"
+  ],
   code: `
   $setServerVar[botekle;$mentionedChannels[1]]
   $reply[$messageID;Bot ekleme kanalı başarıyla <#$mentionedChannels[1]> olarak ayarlandı;yes]
