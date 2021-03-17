@@ -1,7 +1,7 @@
-module.exports = ({
-  name:"botekle",
-  alisase:['bot-ekle','addbot','add-bot'],
-  code:`$channelSendMessage[$getServerVar[botlog];{title:Yeni Bir Bot Eklendi}{description:Botun Bilgileri
+module.exports = {
+  name: "botekle",
+  alisase: ["bot-ekle", "addbot", "add-bot"],
+  code: `$channelSendMessage[$getServerVar[botlog];{title:Yeni Bir Bot Eklendi}{description:Botun Bilgileri
   Bot Adı : $userTag[$message[1]]
   Bot ID'si : $message[1]
   Bot Etiketi : <@$message[1]>
@@ -23,4 +23,4 @@ module.exports = ({
   $onlyIf[$getServerVar[sistem]==açık;Botlist Sistemi Aktif Edilmemiş]
   $suppressErrors[$getServerVar[hata]]
   `
-})
+};

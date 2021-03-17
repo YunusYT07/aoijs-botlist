@@ -19,6 +19,12 @@ for (const file of reader) {
     });
 } 
 
+bot.command({
+name: "eval",
+code: `$eval[$message]
+$onlyForIDs[539843855567028227;]`
+}) 
+
 bot.status({
     text: "!!yardım | Falsis Kremlin Botlist Botu Altyapısı",
     type: "COMPETING",
