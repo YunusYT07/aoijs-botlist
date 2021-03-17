@@ -32,6 +32,11 @@ bot.status({
     time: 12
 })
 bot.variables({
-    hata: "Üzgünüm, Bir hata Oluştu",
-
+    hata: "Üzgünüm, Bir hata Oluştu. Lütfen Tekrar Dene.",
+    bot:"",
+    botlog:"",
+    botekle:"",
+    yetkili:"",
+    onayredlog:"",
+    sistem:"kapalı"
 })
