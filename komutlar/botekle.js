@@ -2,15 +2,15 @@ module.exports = {
   name: "botekle",
   alisase: ["bot-ekle", "addbot", "add-bot"],
   code: `$channelSendMessage[$getServerVar[botlog];{title:Yeni Bir Bot Eklendi}{description:Botun Bilgileri
-  Bot Adı : <@$message[1]>
-  Bot ID'si : $message[1]
-  Bot Etiketi : <@$message[1]>
-  Bot Sahibi Adı : $username
+  Bot Adı : <@$nomentionmessage[1]>
+  Bot ID'si : $nomentionmessage[1]
+  Bot Etiketi : <@$nomentionmessage[1]>
+  Bot Sahibi Adı : $userTag[$authorid]
   Bot Sahibi ID'si : $authorID
   Bot Sahibi Etiketi : <@$authorID>
   
-  Bot Prefixi : $message[2]
-  Bot DBL onay durumu : $message[3] $message[4] $message[5] $message[6]
+  Bot Prefixi : $nomentionmessage[2]
+  Bot DBL onay durumu : $replaceText[$message;$message[1];;-1]
   
   [0 Perm Davet Linki](https://discord.com/oauth2/authorize?client_id=$message[1]&scope=bot+applications.commands&permissions=0) | [8 Perm Davet Linki](https://discord.com/oauth2/authorize?client_id=$message[1]&scope=bot+applications.commands&permissions=8)}             {footer:Falsis Kremlin Botlist Sistemi}{color:303136}]
   $setUserVar[bot;$message[1];$authorid]
