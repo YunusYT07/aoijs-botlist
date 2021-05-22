@@ -1,23 +1,14 @@
-const dbd = require("dbd.js");
+const falsis = require("aoi.js");
 var fs = require("fs");
-const bot = new dbd.Bot({
-  token: process.env.token,
+const bot = new falsis.Bot({
+  token: "Token Giriniz",
   prefix: "!!",
   mobile: true,
   fetchInvites: true
 });
 
 bot.onMessage();
-var reader = fs.readdirSync("./komutlar").filter(file => file.endsWith(".js"));
-for (const file of reader) {
-  const command = require(`./komutlar/${file}`);
-  bot.command({
-    name: command.name,
-    aliases: command.aliases,
-    bkz: command.bkz,
-    code: command.code
-  });
-}
+bot.loadCommands(`./komutlar/`)
 
 bot.command({
   name: "eval",
