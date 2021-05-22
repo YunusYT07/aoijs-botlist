@@ -12,6 +12,6 @@
   "author": "Falsis Kremlin",
   "license": "ISC",
   "dependencies": {
-    "dbd.js": "^2.2.5"
+    "aoi.js": "^1.0.6"
   }
 }
